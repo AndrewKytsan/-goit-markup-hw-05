@@ -59,14 +59,15 @@ img{
     letter-spacing: 0.02em;
     font-weight: 500;
     color: inherit;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
 .link:focus {
   color: var(--accent-cl);
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 
 .curent{
@@ -108,6 +109,9 @@ img{
     color: var(--title-cl);
     cursor: pointer;
     padding: 6px 22px;
+    transition-property:color, background-color,  box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn:hover,
@@ -115,9 +119,6 @@ img{
     color: var(--white-cl);
     background-color: var(--accent-cl);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition-property:color, background-color,  box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-btn{
@@ -349,28 +350,29 @@ img{
     justify-content: center;
     border-radius: 50%;
     background-color: var(--white-cl);
-}
-
-.social-link:hover,
-.social-link:focus{
-    background-color:var(--accent-cl);
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.social-link:hover,
+.social-link:focus{
+    background-color:var(--accent-cl);
+}
+
 .social-link:hover .social-icon,
 .social-link:focus .social-icon{
     fill:var(--white-cl);
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   
  }    
 
 .social-icon{
     width: 20px;
     height: 20px;
     fill:var(--social-icon-cl);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-item:not(:last-child){
@@ -385,25 +387,27 @@ img{
     height: 90px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon-link:hover, 
 .client-icon-link:focus{
     border-color: var(--accent-cl);
-    transition-property: border-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   
 }
 .client-icon{
 fill: var(--social-icon-cl);
+transition-property: fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon-link:hover .client-icon,
 .client-icon-link:focus .client-icon{
     fill: var(--accent-cl);
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   
 } 
 /* Страница Портфолио*/
 
@@ -443,13 +447,14 @@ fill: var(--social-icon-cl);
 .project-card{
     text-decoration: none;
     display: block;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-card:hover,
 .project-card:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   
 }
 
 .box{
@@ -541,6 +546,9 @@ text-align: center;
     justify-content: center;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 .social-net-icon{
@@ -552,9 +560,7 @@ text-align: center;
 .social-net-link:hover,
 .social-net-link:focus{
     background-color:var(--accent-cl);
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   
     }
 
     /* Модальное окно*/
@@ -562,21 +568,30 @@ text-align: center;
     position: fixed;
     top:0;
     left: 0;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+   
 }
-
 .is-hidden{
     opacity: 0;
     pointer-events: none;
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
+
 
 .modal-window{
     position: absolute;
-    top: 55%;
+    top:55%;
     left: 50%;
-    transform: translate(-55%, -50%);
+    transform: translate(-55%,-50%);
     height: 581px;
     min-width: 450px;
     max-height: 609px;
@@ -584,7 +599,6 @@ text-align: center;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
-
 .close-tag{
     display: flex;
     justify-content:flex-end;
