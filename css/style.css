@@ -73,7 +73,6 @@ img{
 .curent{
     display: block;
     color: var(--accent-cl);
-    height: auto;
 }
 .curent::after{
     content: "";
@@ -465,7 +464,8 @@ margin-left: auto;
 margin-right: auto;
 overflow: hidden;
 }
-.project-card:hover .overlay{
+.project-card:hover .overlay,
+.project-card:focus .overlay{
     transform: translateY(0);
 }
 .overlay{
@@ -601,11 +601,9 @@ text-align: center;
    
 }
 .close-tag{
-    display: flex;
-    justify-content:flex-end;
-    margin-top: 8px;
-    margin-right: 8px;
-    margin-bottom: 2px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
 }
 
 .close-tag-button{
